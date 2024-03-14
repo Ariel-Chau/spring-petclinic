@@ -5,6 +5,12 @@ pipeline {
         maven "MAVEN3" 
     }
 
+    stage('Cloning git') {
+            steps {
+                 git branch: 'main', url: 'https://github.com/Ariel-Chau/spring-petclinic'
+            }
+        }
+
     stages {
         stage('Checkout and Build') {
             steps {
