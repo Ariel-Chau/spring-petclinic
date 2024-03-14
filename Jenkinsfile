@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout and Build') {
             steps {
-                git branch: 'master', url: 'https://github.com/Ariel-Chau/spring-petclinic'
+                git branch: 'main', url: 'https://github.com/Ariel-Chau/spring-petclinic'
     
                 bat "mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package"
             }
